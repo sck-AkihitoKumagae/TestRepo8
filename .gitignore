@@ -72,6 +72,7 @@ artifacts/
 *.xlsx
 !仕様書_Excelテンプレート.xlsx
 !sample-output.xlsx
+!demo-output.xlsx
 
 # Rider
 .idea/
