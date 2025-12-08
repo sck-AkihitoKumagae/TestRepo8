@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpecDocGenerator.Core\SpecDocGenerator.Core.csproj" />
+    <ProjectReference Include="..\SpecDocGenerator.Analysis\SpecDocGenerator.Analysis.csproj" />
+    <ProjectReference Include="..\SpecDocGenerator.LLM\SpecDocGenerator.LLM.csproj" />
+    <ProjectReference Include="..\SpecDocGenerator.Excel\SpecDocGenerator.Excel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
