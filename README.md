@@ -30,7 +30,8 @@ SpecDocGenerator/
 │   ├── SpecDocGenerator.Analysis/   # コード解析エンジン
 │   ├── SpecDocGenerator.LLM/        # LLM統合サービス
 │   ├── SpecDocGenerator.Excel/      # Excel出力サービス
-│   └── SpecDocGenerator.CLI/        # コマンドラインインターフェース
+│   ├── SpecDocGenerator.CLI/        # コマンドラインインターフェース
+│   └── SpecDocGenerator.WPF/        # WPFデスクトップアプリケーション
 └── tests/                           # テストプロジェクト
 ```
 
@@ -56,15 +57,32 @@ dotnet run
 
 ## 使用方法
 
-### 基本的な使用方法
+### CLI版（コマンドライン）
 
 ```bash
 # 対話モード
+cd src/SpecDocGenerator.CLI
 dotnet run
 
 # コマンドライン引数で実行
 dotnet run /path/to/your/project
 ```
+
+### GUI版（WPFデスクトップアプリ）
+
+```bash
+# WPFアプリケーションを起動
+cd src/SpecDocGenerator.WPF
+dotnet run
+```
+
+または、Windowsでビルドして実行:
+```bash
+dotnet build src/SpecDocGenerator.WPF -c Release
+# 生成された .exe ファイルを実行
+```
+
+詳細は [WPF版README](src/SpecDocGenerator.WPF/README.md) を参照してください。
 
 ### Azure OpenAI を使用する場合
 
@@ -119,13 +137,16 @@ export AZURE_OPENAI_DEPLOYMENT="gpt-4"
 
 ## 今後の機能拡張
 
-- [ ] WPF/Avalonia UI の実装
+- [x] WPF デスクトップアプリの実装
+- [ ] Avalonia UI の実装（クロスプラットフォーム対応）
 - [ ] Tree-sitter による高度な構文解析
 - [ ] チェックポイント/再開機能
 - [ ] 差分生成（前回との比較）
 - [ ] 用語集・略語表の自動生成
 - [ ] コードメトリクス（複雑度、カバレッジ）
 - [ ] ローカル LLM 対応（Ollama）
+- [ ] 一時停止/再開機能（GUI版）
+- [ ] 並列処理の最適化
 
 ## ライセンス
 
