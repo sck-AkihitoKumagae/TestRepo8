@@ -107,15 +107,6 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private void SelectTargetFolder()
     {
-        var dialog = new Microsoft.Win32.OpenFileDialog
-        {
-            CheckFileExists = false,
-            CheckPathExists = true,
-            FileName = "フォルダ選択",
-            Title = "解析対象フォルダを選択"
-        };
-
-        // Use folder browser dialog instead
         var folderDialog = new System.Windows.Forms.FolderBrowserDialog
         {
             Description = "解析対象フォルダを選択してください",
